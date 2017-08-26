@@ -1,5 +1,5 @@
-# Import a text file filled with a paragraph of your choosing. --done
-# Approximate word count --done
+# Import a text file filled with a paragraph of your choosing. 
+# Approximate word count
 # Approximate sentence count
 # Approximate letter count (per word)
 # Average sentence length (in words)
@@ -30,31 +30,20 @@ wordsFile = original_file.split()
 # calculate number of letters in each word and push to array: ex [3,5,6,7,2] ----------
 for word in wordsFile:
 	wordCountList.append(len(word))
-# print(wordCountList)
 
-# calculate appx letter count and adds them, can get average --------
+# calculate appx letter count and adds them--------
 for letters in wordCountList:
 	letterCount += letters
-# print(letterCount)
-# print(str(letterCount/len(wordCountList)))
-	
 
 # calculate appx sentence count by separating by period and putting in array ---------
 sentenceCount = original_file.split('.')
 new_sentenceCount = sentenceCount[:-1]
-# print(new_sentenceCount)
 
 # calculate sentence length in words -----
-# print(sentenceCount)
-# print(sentenceCount.count(' '))
 #iterates through each sentence and separates by spaces then adds numbers together ------
 for numWords in sentenceCount[:-1]:
 	sentenceLengthList.append(numWords.count(" "))
 	wordCount += numWords.count(" ")
-# print(sentenceLengthList)
-# print(str(wordCount/len(sentenceLengthList)))
-# print(sentenceLengthList)
-
 
 # Printing It All Out... 
 print("Word Analysis")
